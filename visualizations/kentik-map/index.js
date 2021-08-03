@@ -1,20 +1,28 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import { AutoSizer, Card, CardBody, HeadingText, NrqlQuery, Spinner, TableChart } from "nr1";
-import { LatLngBounds } from "leaflet";
-import { Map, GeoJSON, Popup, TileLayer } from "react-leaflet";
+import {
+  AutoSizer,
+  Card,
+  CardBody,
+  HeadingText,
+  NrqlQuery,
+  Spinner,
+  TableChart
+} from 'nr1';
+import { LatLngBounds } from 'leaflet';
+import { Map, GeoJSON, Popup, TileLayer } from 'react-leaflet';
 
-import colors from "../colors";
-import { formatBytesGreek } from "../greekPrefixing";
-import { getCountryMapData } from "./getMapData";
+import colors from '../colors';
+import { formatBytesGreek } from '../greekPrefixing';
+import { getCountryMapData } from './getMapData';
 
 const mapTiles =
-  "https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png";
+  'https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png';
 const mapAttr =
   'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.';
 
-  // these don't work because the component is getting passed null for its prop values... and nr1.json doesn't support default values
+// these don't work because the component is getting passed null for its prop values... and nr1.json doesn't support default values
 const defaultProps = {
   metric: 'kentik.rollup.bytes.rcv',
   initialLat: 30,
@@ -38,17 +46,15 @@ export default class KentikMapVisualization extends React.Component {
 
   state = {
     popupPos: null,
-    popupFeature: null,
+    popupFeature: null
   };
 
   dataMap = {};
 
-  transformData = (data) => {
-    const transformedData = [];
-
+  transformData = data => {
     return data.map((item, index) => {
       const countryGroup = item.metadata.groups.find(
-        (item) => item.type === "facet" && item.name === "country"
+        item => item.type === 'facet' && item.name === 'country'
       );
       const country = countryGroup?.value;
       const countryData = country ? getCountryMapData(country) : {};
@@ -57,7 +63,7 @@ export default class KentikMapVisualization extends React.Component {
         this.dataMap[country] = {
           ...item,
           index,
-          sum: item.data.reduce((acc, dataItem) => acc + dataItem.y, 0),
+          sum: item.data.reduce((acc, dataItem) => acc + dataItem.y, 0)
         };
       }
 
@@ -65,28 +71,26 @@ export default class KentikMapVisualization extends React.Component {
     });
   };
 
-  getDataForCountry = (country) => this.dataMap[country] || {};
+  getDataForCountry = country => this.dataMap[country] || {};
 
-  getMapBounds = (data) => {
+  getMapBounds = data => {
     let maxLon;
     let maxLat;
     let minLon;
     let minLat;
 
-    const bounds = data
-      .filter((item) => !!item.bounds)
-      .map((item) => item.bounds);
+    const bounds = data.filter(item => !!item.bounds).map(item => item.bounds);
 
     if (bounds.length === 0) {
       return undefined;
     }
 
-    bounds.forEach((bound) => {
+    bounds.forEach(bound => {
       const {
         minLon: currMinLon,
         minLat: currMinLat,
         maxLon: currMaxLon,
-        maxLat: currMaxLat,
+        maxLat: currMaxLat
       } = bound;
 
       minLon = minLon === undefined ? currMinLon : Math.min(minLon, currMinLon);
@@ -108,30 +112,30 @@ export default class KentikMapVisualization extends React.Component {
     );
   };
 
-  setPopup = (event) => {
+  setPopup = event => {
     this.setState({
       popupPos: event ? event.latlng : null,
-      popupFeature: event ? event.target.feature : null,
+      popupFeature: event ? event.target.feature : null
     });
   };
 
   handleClosePopup = () => {
     this.setState({
       popupPos: null,
-      popupFeature: null,
+      popupFeature: null
     });
   };
 
-  handleStyleFeature = (feature) => {
-    const { properties } = feature;
+  handleStyleFeature = feature => {
+    // const { properties } = feature;
     const data = this.getDataForCountry(feature.id);
 
     if (data) {
       return {
-        color: "#000",
+        color: '#000',
         weight: 1,
         fillColor: colors[data.index],
-        fillOpacity: 0.75,
+        fillOpacity: 0.75
       };
     }
 
@@ -139,8 +143,8 @@ export default class KentikMapVisualization extends React.Component {
   };
 
   handleEachFeature = (feature, layer) => {
-    layer.on("mouseover", this.setPopup, this);
-    layer.on("mouseout", this.handleClosePopup, this);
+    layer.on('mouseover', this.setPopup, this);
+    layer.on('mouseout', this.handleClosePopup, this);
   };
 
   renderMap = data => {
@@ -173,7 +177,7 @@ export default class KentikMapVisualization extends React.Component {
             </HeadingText>
             {formatBytesGreek(
               this.getDataForCountry(popupFeature.id).sum,
-              "bits/s"
+              'bits/s'
             )}
           </Popup>
         )}
@@ -193,7 +197,7 @@ export default class KentikMapVisualization extends React.Component {
 
     return (
       <AutoSizer>
-        {({ width, height }) => (
+        {({ height }) => (
           <NrqlQuery
             query={query}
             accountId={parseInt(accountId)}
@@ -212,8 +216,10 @@ export default class KentikMapVisualization extends React.Component {
                   <Card style={{ height: showTable ? height - 176 : height }}>
                     {this.renderMap(data)}
                   </Card>
-                  
-                  {showTable && <TableChart data={data} fullWidth className="tableChart" />}
+
+                  {showTable && (
+                    <TableChart data={data} fullWidth className="tableChart" />
+                  )}
                 </Card>
               );
             }}
