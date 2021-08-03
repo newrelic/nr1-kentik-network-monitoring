@@ -1,6 +1,7 @@
 {
   "schemaType": "NERDPACK",
-  "id": "",
-  "displayName": "{{NERDPACK_NAME}}",
-  "description": "My new nerdpack"
+  "id": "a5b3f4f5-c9e6-4ea4-a13e-fc648abff785",
+  "displayName": "Kentik Network Monitoring Visualizations",
+  "description": "Nerdpack containing visualizations for representing Ketnik data ingested in New Relic"
 }
+
