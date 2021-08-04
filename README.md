@@ -1,15 +1,15 @@
-[![New Relic Experimental header](https://github.com/newrelic/opensource-website/raw/master/src/images/categories/Experimental.png)](https://opensource.newrelic.com/oss-category/#new-relic-experimental)
+[![New Relic One Catalog Project header](https://github.com/newrelic/opensource-website/raw/master/src/images/categories/New_Relic_One_Catalog_Project.png)](https://opensource.newrelic.com/oss-category/#new-relic-one-catalog-project)
 
 # NR1 Kentik Network Monitoring
 
-![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/newrelic/{{ NERDPACK_NAME }}?include_prereleases&sort=semver) [![Snyk](https://snyk.io/test/github/newrelic/{{ NERDPACK_NAME }}/badge.svg)](https://snyk.io/test/github/newrelic/{{ NERDPACK_NAME }})
+![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/newrelic/nr1-kentik-network-monitoring?include_prereleases&sort=semver) [![Snyk](https://snyk.io/test/github/newrelic/nr1-kentik-network-monitoring/badge.svg)](https://snyk.io/test/github/newrelic/nr1-kentik-network-monitoring)
 
 ## About this Nerdpack
 
 This Nerdpack contains visualizations for Kentik specific network data as a part of the Kentik & New Relic partnership. Currently, you will find two visualizations, a sankey and a map. You can use these for visualizing network data flows and location.
 
-![Screenshot #1](screenshots/screenshot_01.png)
-![Screenshot #2](screenshots/screenshot_02.png)
+![Screenshot #1](screenshots/geomap.png)
+![Screenshot #2](screenshots/sankey.png)
 
 ## Open source license
 
@@ -65,12 +65,9 @@ We encourage you to bring your experiences and questions to the [Explorers Hub](
 
 ## Community
 
-> Work with the Explorer's Hub team to create a tag for your app, then update the link below.
-
 New Relic hosts and moderates an online forum where customers can interact with New Relic employees as well as other customers to get help and share best practices. Like all official New Relic open source projects, there's a related Community topic in the New Relic Explorers Hub. You can find this project's topic/threads here:
 
-https://discuss.newrelic.com/t/{{ APP*NAME }}
-*(Note: This URL is subject to change before GA)\_
+https://discuss.newrelic.com/t/new-relic-one-network-monitoring/157184
 
 ## Issues / enhancement requests
 
@@ -78,15 +75,13 @@ Issues and enhancement requests can be submitted in the [Issues tab of this repo
 
 ## Security
 
-As noted in our [security policy](https://github.com/newrelic/{{ NERDPACK_NAME }}/security/policy), New Relic is committed to the privacy and security of our customers and their data. We believe that providing coordinated disclosure by security researchers and engaging with the security community are important means to achieve our security goals.
+As noted in our [security policy](https://github.com/newrelic/nr1-kentik-network-monitoring/security/policy), New Relic is committed to the privacy and security of our customers and their data. We believe that providing coordinated disclosure by security researchers and engaging with the security community are important means to achieve our security goals.
 
 If you believe you have found a security vulnerability in this project or any of New Relic's products or websites, we welcome and greatly appreciate you reporting it to New Relic through [HackerOne](https://hackerone.com/newrelic).
 
 # Contributing
 
-> Work with the Open Source Office to update the email alias below.
-
 Contributions are encouraged! If you submit an enhancement request, we'll invite you to contribute the change yourself. Please review our [Contributors Guide](CONTRIBUTING.md).
 
-Keep in mind that when you submit your pull request, you'll need to sign the CLA via the click-through using CLA-Assistant. If you'd like to execute our corporate CLA, or if you have any questions, please drop us an email at opensource+{{ APP_NAME }}@newrelic.com.
+Keep in mind that when you submit your pull request, you'll need to sign the CLA via the click-through using CLA-Assistant. If you'd like to execute our corporate CLA, or if you have any questions, please drop us an email at opensource+nr1-kentik-network-monitoring@newrelic.com.
 
