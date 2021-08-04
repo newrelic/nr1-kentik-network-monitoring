@@ -254,7 +254,6 @@ export default class SankeyVisualization extends React.Component {
 
   render() {
     const {
-      chartName,
       dimensionLeft,
       dimensionRight,
       showTable,
@@ -276,12 +275,6 @@ export default class SankeyVisualization extends React.Component {
 
     return (
       <Card className="container">
-        {chartName && (
-          <HeadingText type={HeadingText.TYPE.HEADING_6} className="chartName">
-            {chartName}
-          </HeadingText>
-        )}
-
         <AutoSizer>
           {({ width, height }) => (
             <NrqlQuery
