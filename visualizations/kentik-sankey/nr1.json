@@ -1,51 +1,46 @@
 {
-    "schemaType": "VISUALIZATION",
-    "id": "kentik-sankey",
-    "displayName": "KentikSankey",
-    "description": "",
-    "configuration": [
+  "schemaType": "VISUALIZATION",
+  "id": "kentik-sankey",
+  "displayName": "Network sankey",
+  "description": "",
+  "configuration": [
+    {
+      "name": "nrqlQueries",
+      "title": "NRQL Queries",
+      "type": "collection",
+      "items": [
         {
-            "name": "chartName",
-            "title": "Chart Name (optional)",
-            "description": "Optional Chart Name",
-            "type": "string"
+          "name": "accountId",
+          "title": "Account ID",
+          "description": "Account ID to be associated with the query",
+          "type": "account-id"
         },
         {
-            "name": "nrqlQueries",
-            "title": "NRQL Queries",
-            "type": "collection",
-            "items": [
-                {
-                    "name": "accountId",
-                    "title": "Account ID",
-                    "description": "Account ID to be associated with the query",
-                    "type": "account-id"
-                },
-                {
-                    "name": "query",
-                    "title": "Query",
-                    "description": "NRQL query for visualization",
-                    "type": "nrql"
-                }
-            ]
-        },
-        {
-            "name": "dimensionLeft",
-            "title": "Left Dimension",
-            "description": "Left side dimension of Sankey",
-            "type": "string"
-        },
-        {
-            "name": "dimensionRight",
-            "title": "Right Dimension",
-            "description": "Right side dimension of Sankey",
-            "type": "string"
-        },
-        {
-            "name": "showTable",
-            "title": "Show data table",
-            "description": "Show the chart data in a table",
-            "type": "boolean"
+          "name": "query",
+          "title": "Query",
+          "description": "NRQL query for visualization",
+          "type": "nrql"
         }
-    ]
+      ]
+    },
+    {
+      "name": "dimensionLeft",
+      "title": "Left Dimension",
+      "description": "Left side dimension of Sankey",
+      "type": "string"
+    },
+    {
+      "name": "dimensionRight",
+      "title": "Right Dimension",
+      "description": "Right side dimension of Sankey",
+      "type": "string"
+    },
+    {
+      "name": "showTable",
+      "title": "Show data table",
+      "description": "Show the chart data in a table",
+      "type": "boolean"
+    }
+  ]
 }
+

@@ -22,11 +22,6 @@ export default class SankeyVisualization extends React.Component {
   // the nr1.json file for the visualization. See docs for more details.
   static propTypes = {
     /**
-     * Chart Name
-     */
-    chartName: PropTypes.string,
-
-    /**
      * An array of objects consisting of a nrql `query` and `accountId`.
      * This should be a standard prop for any NRQL based visualizations.
      */
@@ -259,7 +254,6 @@ export default class SankeyVisualization extends React.Component {
 
   render() {
     const {
-      chartName,
       dimensionLeft,
       dimensionRight,
       showTable,
@@ -281,12 +275,6 @@ export default class SankeyVisualization extends React.Component {
 
     return (
       <Card className="container">
-        {chartName && (
-          <HeadingText type={HeadingText.TYPE.HEADING_6} className="chartName">
-            {chartName}
-          </HeadingText>
-        )}
-
         <AutoSizer>
           {({ width, height }) => (
             <NrqlQuery

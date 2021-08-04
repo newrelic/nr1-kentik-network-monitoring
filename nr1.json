@@ -1,7 +1,7 @@
 {
   "schemaType": "NERDPACK",
   "id": "a5b3f4f5-c9e6-4ea4-a13e-fc648abff785",
-  "displayName": "Kentik Network Monitoring Visualizations",
-  "description": "Nerdpack containing visualizations for representing Ketnik data ingested in New Relic"
+  "displayName": "Network Monitoring",
+  "description": "Realtime network flow visualization built from NetFlow/ IPFIX & sFlow data and infused with SNMP metrics."
 }
 
