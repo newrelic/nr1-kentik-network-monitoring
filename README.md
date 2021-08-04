@@ -2,7 +2,7 @@
 
 # NR1 Kentik Network Monitoring
 
-![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/newrelic/nr1-kentik-network-monitoring?include_prereleases&sort=semver) [![Snyk](https://snyk.io/test/github/newrelic/nr1-kentik-network-monitoring/badge.svg)](https://snyk.io/test/github/newrelic/nr1-kentik-network-monitoring)
+![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/newrelic/nr1-kentik-network-monitoring?include_prereleases&sort=semver) 
 
 ## About this Nerdpack
 
