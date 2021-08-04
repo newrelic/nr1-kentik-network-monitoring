@@ -1,60 +1,61 @@
 {
-    "schemaType": "VISUALIZATION",
-    "id": "kentik-map",
-    "displayName": "KentikMap",
-    "description": "",
-    "configuration": [
+  "schemaType": "VISUALIZATION",
+  "id": "kentik-map",
+  "displayName": "Network geomap",
+  "description": "",
+  "configuration": [
+    {
+      "name": "accountId",
+      "title": "Account ID",
+      "description": "Account ID to be associated with the query",
+      "type": "account-id"
+    },
+    {
+      "name": "metric",
+      "title": "Metric",
+      "description": "Select either bytes sent or bytes received",
+      "type": "enum",
+      "items": [
         {
-            "name": "accountId",
-            "title": "Account ID",
-            "description": "Account ID to be associated with the query",
-            "type": "account-id"
+          "title": "received",
+          "value": "kentik.rollup.bytes.rcv"
         },
         {
-            "name": "metric",
-            "title": "Metric",
-            "description": "Select either bytes sent or bytes received",
-            "type": "enum",
-            "items": [
-                {
-                    "title": "received",
-                    "value": "kentik.rollup.bytes.rcv"
-                },
-                {
-                    "title": "sent",
-                    "value": "kentik.rollup.bytes.xmt"
-                }
-            ]
-        },
-        {
-            "name": "autoZoom",
-            "title": "Auto zoom/pan",
-            "description": "Automatically zoom and pan the map to fit the queried countries",
-            "type": "boolean"
-        },
-        {
-            "name": "initialLat",
-            "title": "Initial Latitude",
-            "description": "The Initial latitude center of the map",
-            "type": "number"
-        },
-        {
-            "name": "initialLng",
-            "title": "Initial Longitude",
-            "description": "The Initial longitude center of the map",
-            "type": "number"
-        },
-        {
-            "name": "initialZoom",
-            "title": "Initial Zoom",
-            "description": "The Initial zoom level of the map (0-18)",
-            "type": "number"
-        },
-        {
-            "name": "showTable",
-            "title": "Show data table",
-            "description": "Show the chart data in a table",
-            "type": "boolean"
+          "title": "sent",
+          "value": "kentik.rollup.bytes.xmt"
         }
-    ]
+      ]
+    },
+    {
+      "name": "autoZoom",
+      "title": "Auto zoom/pan",
+      "description": "Automatically zoom and pan the map to fit the queried countries",
+      "type": "boolean"
+    },
+    {
+      "name": "initialLat",
+      "title": "Initial Latitude",
+      "description": "The Initial latitude center of the map",
+      "type": "number"
+    },
+    {
+      "name": "initialLng",
+      "title": "Initial Longitude",
+      "description": "The Initial longitude center of the map",
+      "type": "number"
+    },
+    {
+      "name": "initialZoom",
+      "title": "Initial Zoom",
+      "description": "The Initial zoom level of the map (0-18)",
+      "type": "number"
+    },
+    {
+      "name": "showTable",
+      "title": "Show data table",
+      "description": "Show the chart data in a table",
+      "type": "boolean"
+    }
+  ]
 }
+

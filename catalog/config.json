@@ -1,7 +1,7 @@
 {
-  "tagline": "Realtime network flow visualizations",
+  "tagline": "Realtime network visualization",
   "repository": "https://github.com/newrelic/nr1-kentik-network-monitoring.git",
-  "details": "The Network Telemetry visualizations display the data collected by the Network Telemetry Integration.\n\nVisualize network traffic flows and track network infrastructure metrics alongside other telemetry data, to get to the source of problems quicker.\n\n-Use NetFlow/ IPFIX visualizations to quickly identify where traffic is coming from and going across your routing tier.\n-Use sFlow visualization to view top talkers in your network, and who they are communicating with.\n-Ensure device health by keeping an eye on CPU, memory, interface, and runout time. Get early insights before experiencing impact.",
+  "details": "The Network Telemetry visualizations display the data collected by the Network Telemetry Integration.\n\nVisualize network traffic flows and track network infrastructure metrics alongside other telemetry data, to get to the source of problems quicker.\n\n- Use NetFlow/ IPFIX visualizations to quickly identify where traffic is coming from and going across your routing tier.\n- Use sFlow visualization to view top talkers in your network, and who they are communicating with.\n- Ensure device health by keeping an eye on CPU, memory, interface, and runout time. Get early insights before experiencing impact.",
   "support": {
     "issues": {
       "url": "https://github.com/newrelic/nr1-kentik-network-monitoring/issues"
@@ -13,6 +13,6 @@
       "url": "https://discuss.newrelic.com/t/[YOUR REPO SUPPORT TOPIC]"
     }
   },
-  "whatsNew": "\n-Feat: Initial release of geomap and sankey charts"
+  "whatsNew": "\n- Feat: Initial release of geomap and sankey charts"
 }
 
