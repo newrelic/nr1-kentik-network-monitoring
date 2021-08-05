@@ -10,7 +10,7 @@
       "address": "opensource+nr1-kentik-network-monitoring@newrelic.com"
     },
     "community": {
-      "url": "https://discuss.newrelic.com/t/[YOUR REPO SUPPORT TOPIC]"
+      "url": "https://discuss.newrelic.com/t/new-relic-one-network-monitoring/157184"
     }
   },
   "whatsNew": "\n- Feat: Initial release of geomap and sankey charts"
