@@ -1,7 +1,7 @@
 {
   "schemaType": "VISUALIZATION",
   "id": "kentik-sankey",
-  "displayName": "Network sankey",
+  "displayName": "NetFlow sankey",
   "description": "",
   "configuration": [
     {

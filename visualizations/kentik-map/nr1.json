@@ -1,7 +1,7 @@
 {
   "schemaType": "VISUALIZATION",
   "id": "kentik-map",
-  "displayName": "Network geomap",
+  "displayName": "NetFlow geomap",
   "description": "",
   "configuration": [
     {
