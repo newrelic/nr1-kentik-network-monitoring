@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/newrelic/nr1-kentik-network-monitoring/compare/v1.0.1...v1.1.0) (2021-08-05)
+
+
+### Features
+
+* Adds the documentation tab markdown ([5a9b646](https://github.com/newrelic/nr1-kentik-network-monitoring/commit/5a9b64633ee049caf63891f5a1a89ae6a18cc9a3))
+
 ## [1.0.1](https://github.com/newrelic/nr1-kentik-network-monitoring/compare/v1.0.0...v1.0.1) (2021-08-05)
 
 
