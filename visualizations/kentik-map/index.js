@@ -24,7 +24,7 @@ const mapAttr =
 
 // these don't work because the component is getting passed null for its prop values... and nr1.json doesn't support default values
 const defaultProps = {
-  metric: 'kentik.rollup.bytes.rcv',
+  trafficDirection: 'dst_geo',
   initialLat: 30,
   initialLng: -40,
   initialZoom: 3
@@ -33,7 +33,7 @@ const defaultProps = {
 export default class KentikMapVisualization extends React.Component {
   static propTypes = {
     accountId: PropTypes.number, // NRQL Query `accountId`
-    metric: PropTypes.string,
+    trafficDirection: PropTypes.string,
     showTable: PropTypes.bool,
     autoZoom: PropTypes.bool,
     initialLat: PropTypes.number,
@@ -187,9 +187,10 @@ export default class KentikMapVisualization extends React.Component {
 
   render() {
     const { accountId, showTable } = this.props;
-    const metric = this.props.metric || defaultProps.metric;
-    const query = `SELECT max(sentByteRate) AS 'bps' FROM (FROM Metric SELECT rate(sum(${metric}), 1 second) AS 'sentByteRate' FACET country) FACET country WHERE sentByteRate > 0 SINCE 1 day ago`;
-    const nrqlQueryPropsAvailable = !!accountId && !!metric;
+    const trafficDirection =
+      this.props.trafficDirection || defaultProps.trafficDirection;
+    const query = `SELECT max(sentByteRate) AS 'bps' FROM (FROM KFlow SELECT rate(sum(in_bytes)*8, 1 second) AS 'sentByteRate' FACET ${trafficDirection} WHERE ${trafficDirection} IS NOT NULL) FACET ${trafficDirection} as 'country' WHERE sentByteRate > 0 SINCE 1 day ago`;
+    const nrqlQueryPropsAvailable = !!accountId && !!trafficDirection;
 
     if (!nrqlQueryPropsAvailable) {
       return <EmptyState />;
