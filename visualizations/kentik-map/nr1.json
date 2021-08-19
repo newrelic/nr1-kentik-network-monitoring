@@ -11,18 +11,18 @@
       "type": "account-id"
     },
     {
-      "name": "metric",
-      "title": "Metric",
-      "description": "Select either bytes sent or bytes received",
+      "name": "trafficDirection",
+      "title": "Traffic direction",
+      "description": "Select either source or destination",
       "type": "enum",
       "items": [
         {
-          "title": "received",
-          "value": "kentik.rollup.bytes.rcv"
+          "title": "Destination country",
+          "value": "dst_geo"
         },
         {
-          "title": "sent",
-          "value": "kentik.rollup.bytes.xmt"
+          "title": "Source country",
+          "value": "src_geo"
         }
       ]
     },
