@@ -238,7 +238,7 @@ const EmptyState = () => (
         spacingType={[HeadingText.SPACING_TYPE.LARGE]}
         type={HeadingText.TYPE.HEADING_3}
       >
-        Please provide the Metric &amp; account ID.
+        Please select your Account ID
       </HeadingText>
     </CardBody>
   </Card>
