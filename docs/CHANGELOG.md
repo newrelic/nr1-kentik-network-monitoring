@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/newrelic/nr1-kentik-network-monitoring/compare/v1.1.1...v1.2.0) (2021-10-04)
+
+
+### Features
+
+* update semantic release with node ([594db3f](https://github.com/newrelic/nr1-kentik-network-monitoring/commit/594db3f51799bcec738163f82a1e50b529711457))
+
 ## [1.1.1](https://github.com/newrelic/nr1-kentik-network-monitoring/compare/v1.1.0...v1.1.1) (2021-08-19)
 
 
