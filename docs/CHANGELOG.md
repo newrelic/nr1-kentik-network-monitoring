@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/newrelic/nr1-kentik-network-monitoring/compare/v1.2.0...v1.3.0) (2021-10-22)
+
+
+### Features
+
+* **ReadMe:** update ReadMe with link to network agent documentation ([1cba8b0](https://github.com/newrelic/nr1-kentik-network-monitoring/commit/1cba8b01cb733c30af66314e51e99463baa252e3))
+
 # [1.2.0](https://github.com/newrelic/nr1-kentik-network-monitoring/compare/v1.1.1...v1.2.0) (2021-10-04)
 
 
