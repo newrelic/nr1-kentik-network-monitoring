@@ -19,7 +19,7 @@ This project is distributed under the [Apache 2 license](LICENSE).
 
 Required:
 
-- Kentik's network agent installed and sending data to your New Relic _documentation coming soon_
+- [Kentik's network agent installed](https://docs.newrelic.com/docs/network-performance-monitoring/get-started/npm-introduction/) and sending data to your New Relic
 - FSO user permission unless running locally only
 
 ## Getting started
