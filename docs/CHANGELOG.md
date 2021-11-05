@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/newrelic/nr1-kentik-network-monitoring/compare/v1.3.0...v1.4.0) (2021-11-05)
+
+
+### Features
+
+* add catalog keywords and categoryTerms ([37d96c3](https://github.com/newrelic/nr1-kentik-network-monitoring/commit/37d96c305a9171d13728362a1b7d7ade7e8099ba))
+
 # [1.3.0](https://github.com/newrelic/nr1-kentik-network-monitoring/compare/v1.2.0...v1.3.0) (2021-10-22)
 
 
