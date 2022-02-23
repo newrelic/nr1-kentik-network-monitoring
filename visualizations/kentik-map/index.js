@@ -204,11 +204,11 @@ export default class KentikMapVisualization extends React.Component {
             accountIds={[parseInt(accountId)]}
             pollInterval={NrqlQuery.AUTO_POLL_INTERVAL}
           >
-            {({ data, loading, error }) => {
+            {({ data, loading, errors }) => {
               if (loading) {
                 return <Spinner />;
               }
-              if (error) {
+              if (errors) {
                 return <ErrorState />;
               }
 
