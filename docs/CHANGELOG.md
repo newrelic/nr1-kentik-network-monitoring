@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/newrelic/nr1-kentik-network-monitoring/compare/v1.4.0...v1.4.1) (2022-02-23)
+
+
+### Bug Fixes
+
+* app deprecations ([64d1b38](https://github.com/newrelic/nr1-kentik-network-monitoring/commit/64d1b38e9aa9667fdf661ea0f4b6696fa55089a3))
+
 # [1.4.0](https://github.com/newrelic/nr1-kentik-network-monitoring/compare/v1.3.0...v1.4.0) (2021-11-05)
 
 
