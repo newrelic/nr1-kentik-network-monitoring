@@ -201,7 +201,7 @@ export default class KentikMapVisualization extends React.Component {
         {({ height }) => (
           <NrqlQuery
             query={query}
-            accountId={parseInt(accountId)}
+            accountIds={[parseInt(accountId)]}
             pollInterval={NrqlQuery.AUTO_POLL_INTERVAL}
           >
             {({ data, loading, error }) => {
